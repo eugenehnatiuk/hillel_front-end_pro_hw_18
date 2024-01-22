@@ -1,7 +1,6 @@
 export { countWords };
 
 function countWords(text) {
-  // const textArray = text.split(' ');
   const textArray = text.split(' ');
 
   const wordsMap = new Map();
