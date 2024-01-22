@@ -22,7 +22,7 @@ function countResultGenerator(wordsMap) {
     for (const [key, value] of wordsMap.entries()) {
       const counterList = document.querySelector('.input-box__output-list');
       const counterListEl = document.createElement('li');
-      counterListEl.innerText = `${key} : ${value}`;
+      counterListEl.innerText = `${key}: ${value}`;
       counterList.appendChild(counterListEl);
     }
   }

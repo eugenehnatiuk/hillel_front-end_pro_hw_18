@@ -2,7 +2,7 @@ export { countWords };
 
 function countWords(text) {
   // const textArray = text.split(' ');
-  const textArray = text.split(/\s+/);
+  const textArray = text.split(' ');
 
   const wordsMap = new Map();
 
@@ -10,12 +10,13 @@ function countWords(text) {
     if (!element.trim()) {
       continue;
     }
+    const lowercaseElement = element.toLowerCase();
     let count = 1;
-    if (wordsMap.has(element)) {
-      count = wordsMap.get(element) + 1;
-      wordsMap.set(element, count);
+    if (wordsMap.has(lowercaseElement)) {
+      count = wordsMap.get(lowercaseElement) + 1;
+      wordsMap.set(lowercaseElement, count);
     } else {
-      wordsMap.set(element, count);
+      wordsMap.set(lowercaseElement, count);
     }
   }
   return wordsMap.size > 0 ? wordsMap : null;
