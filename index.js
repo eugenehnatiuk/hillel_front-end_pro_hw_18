@@ -9,3 +9,6 @@ counterBtn.addEventListener('click', () => {
   const inputText = document.querySelector('textarea').value.trim();
   countResultGenerator(countWords(inputText));
 });
+
+
+
